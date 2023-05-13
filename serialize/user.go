@@ -5,9 +5,7 @@ import "demo1/model"
 type User struct {
 	ID        uint   `json:"id"`
 	UserName  string `json:"user_name"`
-	Nickname  string `json:"nickname"`
 	Status    string `json:"status"`
-	Avatar    string `json:"avatar"`
 	CreatedAt int64  `json:"created_at"`
 }
 
@@ -27,9 +25,9 @@ func BuildUserResponse(user model.User) Response {
 	}
 }
 
-func CheckLogin()  Response {
+func CheckLogin() Response {
 	return Response{
 		Code: CodeCheckLogin,
-		Msg: "未登录",
+		Msg:  "未登录",
 	}
 }
